@@ -14,8 +14,16 @@ int main(){
 
 int multiplicacao(int a, int b){
     int resultado=0;
-    for(int i=0; i<a; i++){
-        resultado+=b;
+    if(a>=0){
+        for(int i=0; i<a; i++){
+            resultado+=b;
+        }
+        return resultado;
     }
-    return resultado;
+    else{
+        for(int i=a; i<0; i++){
+            resultado+=b;
+        }
+        return resultado*(-1);
+    }
 }
